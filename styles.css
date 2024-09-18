@@ -4,31 +4,68 @@
     box-sizing: border-box;
 
 }
+
+section{
+    /* width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.keyboard-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#keyboard {
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
 .key {
-    width: 50px;
+    width: 100px;
     height: 200px;
     display: inline-block;
     background-color: white;
-    border: 1px solid black;
-    margin: 2px;
+    border: 2px solid black;
     text-align: center;
     cursor: pointer;
     position: relative;
     user-select: none;
 }
 .key.black {
-    width: 35px;
+    width: 47px;
     height: 120px;
     background-color: black;
     margin-left: -17px;
     margin-right: -17px;
     z-index: 1;
-    position: absolute;
+    position: relative;
     top: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 .key.active {
     background-color: yellow; 
 }
-#keyboard {
-    position: relative;
+
+
+.key:first-child{
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.key:last-child{
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
 }
